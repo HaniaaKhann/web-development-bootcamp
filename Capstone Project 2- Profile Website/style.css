@@ -1,0 +1,55 @@
+
+.gradient-background {
+  background: linear-gradient(300deg, #B79CED, #A0C4FF, #CAF0F8 );
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.nav-link {
+    color: black; /* normal link color */
+    font-weight: bold;
+}
+
+.nav-link.active {
+    color: #ffffff !important; /* override Bootstrap blue */
+    background-color: #B79CED !important; /* active background */
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    background-color: #B79CED !important;
+    transition: 0.3s;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ensures full viewport height */
+}
+
+main {
+    flex: 1; /* fills remaining space */
+}
+
+footer .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
