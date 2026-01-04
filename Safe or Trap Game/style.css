@@ -1,0 +1,71 @@
+body {
+  text-align: center;
+  background: radial-gradient(circle at top, #1f2933, #020617);
+  margin: 0;
+  padding: 0;
+}
+
+#page-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 3rem;
+  margin: 5%;
+  color: #e5e7eb;
+  letter-spacing: 3px;
+  text-shadow:
+    0 0 10px #00f5ff,
+    0 0 25px rgba(0, 245, 255, 0.6);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  gap: 40px;
+  filter: drop-shadow(0 0 30px rgba(0, 245, 255, 0.15));
+}
+
+.star {
+  height: 200px;
+  width: 200px;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  opacity: 0.25;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  filter: brightness(0.6);
+}
+
+#star-1 { background-color: #00f5ff; }
+#star-2 { background-color: #ff2cf0; }
+#star-3 { background-color: #7c3aed; }
+#star-4 { background-color: #22c55e; }
+
+.star.active {
+  opacity: 1;
+  filter: brightness(1.4);
+  transform: scale(1.25);
+  box-shadow:
+    0 0 15px currentColor,
+    0 0 40px currentColor,
+    0 0 80px rgba(255, 255, 255, 0.4);
+  animation: pulse 0.7s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1.18); }
+  50% { transform: scale(1.28); }
+  100% { transform: scale(1.18); }
+}
