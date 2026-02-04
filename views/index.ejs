@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get Joke</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  <h1>Choose a category</h1>
+
+  <div class="container">
+
+    <form method="POST" action="/get-joke">
+      <input type="submit" name="category" value="Any">
+      <input type="submit" name="category" value="Programming">
+      <input type="submit" name="category" value="Misc">
+      <input type="submit" name="category" value="Dark">
+      <input type="submit" name="category" value="Pun">
+      <input type="submit" name="category" value="Spooky">
+      <input type="submit" name="category" value="Christmas">
+    </form>
+
+    <% if (locals.data) { %>
+      <div class="response-area">
+        <% if (data.type === "single") { %>
+          <p><%= data.joke %></p>
+        <% } else { %>
+          <p><strong><%= data.setup %></strong></p>
+          <p><%= data.delivery %></p>
+        <% } %>
+      </div>
+    <% } %>
+
+  </div>
+
+</body>
+</html>
