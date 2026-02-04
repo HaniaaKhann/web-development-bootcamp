@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1>New Post</h1>
+<form action="/submit" method="POST">
+  <input name="name" type="text" class="feedback-input" placeholder="Author Name" />
+  <input name="title" type="text" class="feedback-input" placeholder="Post Title" />
+  <textarea name="content" class="feedback-input" placeholder="Content"></textarea>
+  <input type="submit" value="SUBMIT" />
+</form>
+
+<% posts.forEach(post => { %>
+  <div class="post">
+    <h2><%= post.title  %></h2>
+    <p><%= post.content %></p>
+  
+    <form action="/delete/<%= post.id %>" method="POST">
+      <button>Delete</button>
+    <a href="/edit/<%= post.id %>">Edit</a>
+    </form>
+  </div>
+<%}) %>
+
+
+<%- include("partials/footer.ejs") %>
+
+

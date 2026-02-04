@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feedback-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.feedback-input:focus {
+  outline: none;
+  border-color: #5c6bc0;
+  box-shadow: 0 0 5px rgba(92, 107, 192, 0.5);
+}
+
+input[type="submit"], button {
+  background-color: #5c6bc0;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #3949ab;
+}
+
+
+.post {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.post h2 {
+  margin-bottom: 10px;
+  color: #5c6bc0;
+}
+
+.post p {
+  margin-bottom: 10px;
+}
+
+.post .buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.post .buttons a,
+.post .buttons form {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .post, form {
+    width: 90%;
+    padding: 15px;
+  }
+  
+  .post .buttons {
+    position: static;
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  .post .buttons a, .post .buttons form {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: #777;
+}

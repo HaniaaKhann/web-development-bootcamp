@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/edit/<%= post.id %>" method ="POST">
+    <input name="name" value="<%= post.author %>" type="text" class="feedback-input" placeholder="Author Name" />
+    <input name="title" value="<%= post.title %>" type="text" class="feedback-input" placeholder="Post Title" />
+    <textarea name="content" value="<%= post.content %>" class="feedback-input" placeholder="Content"></textarea>
+    <button type = "submit"> Save </button>
+</form>
+
+
+<%- include("partials/footer.ejs") %>
