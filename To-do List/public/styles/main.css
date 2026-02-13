@@ -1,0 +1,130 @@
+html {
+  background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  text-align: center;
+  flex: 1;
+}
+
+h1 {
+  color: #ffffff;
+  padding: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.box {
+  max-width: 450px;
+  margin: 60px auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+#heading {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border-bottom: 1px solid #f2f2f2;
+  transition: background 0.2s ease;
+}
+
+.item:hover {
+  background: #f9f9ff;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  margin-right: 15px;
+  transform: scale(1.2);
+  accent-color: #ff7eb3;
+}
+
+p {
+  margin: 0;
+  flex: 1;
+  font-size: 18px;
+  color: #333;
+}
+
+form {
+  margin: 0;
+}
+
+button.add {
+  min-height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.add:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 126, 179, 0.4);
+}
+
+button.edit {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon {
+  height: 18px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+input[type="text"] {
+  height: 55px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: 2px solid #ff7eb3;
+}
+
+::placeholder {
+  color: #bbb;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
