@@ -1,0 +1,56 @@
+<%- include('partials/header.ejs'); -%>
+
+
+<div class="container">
+  <h1 class="mb-4">Hania's Book Notes</h1>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <% books.forEach(book => { %>
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <img 
+            src="https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-M.jpg"
+            class="card-img-top"
+            alt="<%= book.title %> cover">
+          <div class="card-body">
+
+            <h5 class="card-title">
+              <%= book.title %>
+            </h5>
+
+            <p class="card-text mb-1">
+              <strong>Author:</strong> <%= book.author %>
+            </p>
+
+            <p class="card-text mb-1">
+              <strong>Rating:</strong> <%= book.rating %>/5
+            </p>
+
+            <p class="card-text mb-2">
+              <strong>Date Read:</strong> <%= book.date_read.toISOString().split('T')[0] %>
+            </p>
+
+            <p class="card-text">
+              <%= book.notes %>
+            </p>
+          </div>
+
+          <div class="card-footer d-flex justify-content-between">
+            <a class="btn btn-sm btn-outline-primary" href="/edit/<%= book.id %>">
+              Edit
+            </a>
+            <a class="btn btn-sm btn-outline-danger" href="/delete/<%= book.id %>">
+              Delete
+            </a>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+  <div class="mt-4">
+    <a class="btn btn-success" href="/add/">Add Book</a>
+  </div>
+</div>
+
+
+
+<%- include('partials/footer.ejs'); -%>

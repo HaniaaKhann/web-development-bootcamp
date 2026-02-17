@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="container">
+    <div class="py-5 text-center"> 
+        <h1 class="h2">Edit Book</h1> 
+    </div>  
+        <div class="col-md-7 col-lg-8"> 
+            <h4 class="mb-3">Information</h4> 
+            <form class="needs-validation" novalidate="" id="editForm" method="post" action="/edit/<%=book.id%>">
+                <div class="row g-3"> 
+                    <div class="col-12"> 
+                        <label for="title" class="form-label">Book Title</label> 
+                        <input type="text" class="form-control" id="title" name="title" value="<%=book.title %>" required> 
+                    </div> 
+                    <div class="col-12"> 
+                        <label for="author" class="form-label">Author Name</label> 
+                        <input type="text" class="form-control" id="author" name="author" value="<%=book.author %>" required> 
+                    </div> 
+                    <div class="col-12"> <label for="rating" class="form-label">Rating / 5</label> 
+                        <input type="text" class="form-control" id="rating" name="rating" value="<%=book.rating %>" required> 
+                    </div> 
+                    <div class="col-12"> 
+                        <label for="notes" class="form-label">Notes</label> 
+                        <textarea type="text" class="form-control" id="notes" name="notes" value=""><%=book.notes %></textarea>
+                    </div> 
+                    <div class="col-12"> 
+                        <label for="isbn" class="form-label">ISBN</label> 
+                        <input type="text" class="form-control" id="isbn" name="isbn" value="<%=book.isbn %>" required> 
+                    </div> 
+                </div> 
+                
+                <hr class="my-4"> 
+                <button class="w-100 btn btn-primary btn-lg" type="submit">Save Changes</button> 
+            </form> 
+        </div> 
+    </div>
+
+  </div>
+
+<%- include('partials/footer.ejs'); -%>
