@@ -14,7 +14,7 @@ const db = new pg.Client({
   user: "postgres",
   host: "localhost",
   database: "BooksDatabase",
-  password: "haniaa??25",
+  password: "",
   port: 5432,
 });
 
@@ -138,3 +138,4 @@ app.get("/api/book/:isbn", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
